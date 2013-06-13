@@ -1,1 +1,89 @@
 @CHARSET "ISO-8859-1";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------------------------------------------------------
+                         Personnal style 
+------------------------------------------------------------------*/
+
+/*---------------------------- NAV -------------------------------*/
+#navForm{display:none;}
+#navMenu{text-align:center;}
+#navMenu li{display:inline-block;}
+
+
+/*---------------------------- BODY ------------------------------*/
+#video{padding-left:9%}
+#adventure p, #about p{width:45%;display:inline-block;}
+#adventure>:last-child, #about>:last-child{margin-left:9%;}
+input{display:block;}
+/*--------------------------- FOOTER -----------------------------*/
+footer{text-align:center;}
+footer li{display:inline-block;}
+/*---------------------- Responsive style ------------------------*/
+/* Large desktop */
+@media (min-width: 1200px) { 
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	/*----------------- NAV -----------------*/
+	#navForm{display:block;text-align:center;}
+	#navMenu{display:none;}
+	/*----------------- BODY ----------------*/
+	#adventure p, #about p{width:100%;display:inline;margin:0;}
+	#adventure>:last-child, #about>:last-child{margin-left:0;}
+}
