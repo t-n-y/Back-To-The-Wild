@@ -118,11 +118,11 @@ if (isset($_POST['contact']))
 	    <?php echo $confirmMail;?>
 	    <form action="index.php#contact" method="post">
 	    	<?php echo $errorMsg['name'];?>
-	    	<input type="text" placeholder="Nom" name="contact[name]" value="<?php echo $data['name'];?>" required>
+	    	<input type="text" placeholder="Nom" name="contact[name]" value="<?php echo $data['name'];?>">
 	    	<?php echo $errorMsg['mail'];?>
-	    	<input type="email" placeholder="Email" name="contact[mail]" value="<?php  echo $data['mail'];?>">
+	    	<input type="text" placeholder="Email" name="contact[mail]" value="<?php  echo $data['mail'];?>">
 	    	<?php echo $errorMsg['message'];?>
-	    	<textarea rows="5" cols="15" placeholder="Message" name ="contact[message]" required><?php echo $data['message'];?></textarea>
+	    	<textarea rows="5" cols="15" placeholder="Message" name ="contact[message]"><?php echo $data['message'];?></textarea>
 	    	<input type="submit" value="Envoyer">
 	    </form>
 	</article>
