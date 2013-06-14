@@ -43,6 +43,27 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/*----------------------- Clearfix -------------------------------*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
 
 /*------------------------------------------------------------------
                          Personnal style 
@@ -52,16 +73,24 @@ table {
 #navForm{display:none;}
 #navMenu{text-align:center;}
 #navMenu li{display:inline-block;}
-
+#social{text-align:right;padding-left:9%;width:80%;}
+#social li{display:inline-block;}
 
 /*---------------------------- BODY ------------------------------*/
+h2{font-size:1.5em;}
 #video{padding-left:9%}
 #adventure p, #about p{width:45%;display:inline-block;}
 #adventure>:last-child, #about>:last-child{margin-left:9%;}
-input{display:block;}
+input{display:block;margin:auto;}
+#places{width:100%;}
+#gMap{float:left;}
+#mapForm{float:right;}
+#contact form{text-align:center;}
+
 /*--------------------------- FOOTER -----------------------------*/
 footer{text-align:center;}
 footer li{display:inline-block;}
+
 /*---------------------- Responsive style ------------------------*/
 /* Large desktop */
 @media (min-width: 1200px) { 
@@ -75,14 +104,22 @@ footer li{display:inline-block;}
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-	
+	/*----------------- NAV -----------------*/
+	h1{position:absolute;top:0;}
+	nav{padding-top:217px;}
+	#social{text-align:center;width:100%;padding-left:0;}
+	/*----------------- BODY ----------------*/
+	#mapForm h3, #mapForm form{float:left;}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	/*----------------- NAV -----------------*/
+	h1{position:static;}
+	nav{padding-top:0;}
 	#navForm{display:block;text-align:center;}
 	#navMenu{display:none;}
+	#social{text-align:center;width:100%;padding-left:0;}
 	/*----------------- BODY ----------------*/
 	#adventure p, #about p{width:100%;display:inline;margin:0;}
 	#adventure>:last-child, #about>:last-child{margin-left:0;}
