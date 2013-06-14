@@ -1,3 +1,44 @@
+<?php
+$data = array (
+		'name' => '',
+		'mail' => '',
+		'message' => '');
+$errorMsg = array (
+		'name' => '', 
+		'mail' => '', 
+		'message' => '');
+$confirmMail='';
+$to = "contact@detente-noir.com";
+$subject = "Nouveau message";
+$mailheaders = "Reply-To: ".$data['mail'];
+if (isset($_POST['contact']))
+{
+	$data=$_POST['contact'];
+	$cleanData=array_map('strip_tags', $data);
+	$error=false;
+	if (empty($data['name']))
+	{
+		$error=true;
+		$errorMsg['name']='Remplir le nom';
+	}
+	if (empty($data['mail']))
+	{
+		$error=true;
+		$errorMsg['mail']='Remplir l\'email';
+	}
+	if (empty($data['message']))
+	{
+		$error=true;
+		$errorMsg['message']='Ecrire un message';
+	}
+	if (!$error)
+	{
+		$msg="Message de ".$cleanData['firstname']." ".$cleanData['name']."\n Adresse e-mail : ".$cleanData['email']."\n Message :".$cleanData['message'];
+		//mail($to, $subject, $msg);
+		$confirmMail = '<h3>Message envoyé !</h3>';
+	}
+}
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -74,10 +115,14 @@
 	</article>
 	<article id="contact">
 	    <h2>Contact</h2>
-	    <form action="index.php" method="post">
-	    	<input type="text" placeholder="Nom">
-	    	<input type="email" placeholder="Email">
-	    	<textarea rows="5" cols="15" placeholder="Message"></textarea>
+	    <?php echo $confirmMail;?>
+	    <form action="index.php#contact" method="post">
+	    	<?php echo $errorMsg['name'];?>
+	    	<input type="text" placeholder="Nom" name="contact[name]" value="<?php echo $data['name'];?>">
+	    	<?php echo $errorMsg['mail'];?>
+	    	<input type="email" placeholder="Email" name="contact[mail]" value="<?php  echo $data['mail'];?>">
+	    	<?php echo $errorMsg['message'];?>
+	    	<textarea rows="5" cols="15" placeholder="Message" name ="contact[message]"><?php echo $data['message'];?></textarea>
 	    	<input type="submit" value="Envoyer">
 	    </form>
 	</article>
