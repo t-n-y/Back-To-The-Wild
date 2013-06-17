@@ -1,6 +1,6 @@
 $('document').ready(function(){
-	$('#navMenu li a').on("click", function(){
-		$('#navMenu li a').removeClass('active');
+	$('nav li a').on("click", function(){
+		$('nav li a').removeClass('active');
 		$(this).addClass('active');
 		var id = $(this).attr('href');
 		scrollTo(id);
@@ -14,4 +14,7 @@ $('document').ready(function(){
 		$('html,body').animate({scrollTop: height}, 1200);
 		return false;
 	}
+	
+	// Basic FitVids Test
+    $(".container").fitVids();
 });

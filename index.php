@@ -3,6 +3,8 @@ $data = array (
 		'name' => '',
 		'mail' => '',
 		'message' => '');
+$dataRegister = '';
+$errorRegister = null;
 $errorMsg = array (
 		'name' => '', 
 		'mail' => '', 
@@ -21,10 +23,10 @@ if (isset($_POST['contact']))
 		$error=true;
 		$errorMsg['name']='Remplir le nom';
 	}
-	if (empty($data['mail']))
+	if (empty($data['mail']) || (!filter_var($_POST['contact']['mail'], FILTER_VALIDATE_EMAIL)))
 	{
 		$error=true;
-		$errorMsg['mail']='Remplir l\'email';
+		$errorMsg['mail']='Remplir une adresse email valide';
 	}
 	if (empty($data['message']))
 	{
@@ -33,10 +35,20 @@ if (isset($_POST['contact']))
 	}
 	if (!$error)
 	{
-		$msg="Message de ".$cleanData['firstname']." ".$cleanData['name']."\n Adresse e-mail : ".$cleanData['email']."\n Message :".$cleanData['message'];
+		$msg="Message de ".$cleanData['name']."\n Adresse e-mail : ".$cleanData['mail']."\n Message :".$cleanData['message'];
 		//mail($to, $subject, $msg);
 		$confirmMail = '<h3>Message envoyé !</h3>';
 	}
+}
+if (isset($_POST['register'])){
+    
+    if(filter_var($_POST['register'], FILTER_VALIDATE_EMAIL)){
+        $errorRegister = null;
+    }
+    else {
+        $errorRegister = 'Remplir une adresse email valide';
+        $dataRegister = $_POST['register'];
+    }
 }
 ?>
 <!doctype html>
@@ -61,12 +73,11 @@ if (isset($_POST['contact']))
     	    <h1><img src="http://placekitten.com/g/200/300" width="200" height="200" title="" alt=""></h1>
         	<form>
                 <select id="menu" onchange="go()">
-                  <option>--Select a page--</option>
-                  <option value="#contact">Accueil</option>
-                  <option value="#adventure">L'aventure</option>
-                  <option value="#places">Lieux et Inscription</option>
-                  <option value="#about">A propos</option>
-                  <option value="#contact">Contact</option>
+                  <option value="#contact" data-link="home">Accueil</option>
+                  <option value="#adventure" data-link="adventure">L'aventure</option>
+                  <option value="#places" data-link="places">Lieux et Inscription</option>
+                  <option value="#about" data-link="about">A propos</option>
+                  <option value="#contact" data-link="contact">Contact</option>
                 </select>
             </form>
         </div>
@@ -100,8 +111,9 @@ if (isset($_POST['contact']))
 	    </section>
 	    <section id="mapForm">
 	    	<h3>Vivez l'aventure</h3>
-		    <form action="index.php" method="post">
-		    	<input type="email" placeholder="Email">
+	    	<?php echo $errorRegister;?>
+		    <form action="index.php#mapForm" method="post">
+		    	<input type="text" placeholder="Email" name="register" value="<?php  echo $dataRegister;?>">
 		    	<input type="submit" value="Je m'inscris">
 		    </form>
 	    </section>
@@ -137,13 +149,21 @@ if (isset($_POST['contact']))
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="js/jquery.fitvids.js"></script>
     <script src="js/base.js"></script>
+    <script src="js/modernizr.custom.js"></script>
     <script>
-        // Basic FitVids Test
-        $(".container").fitVids();
-        
         //redirection for the select menu
         function go(){
-            window.location=document.getElementById("menu").value;
+            // window.location=document.getElementById("menu").value;
+            var id = document.getElementById("menu").value;
+            scrollTo(id);
+            return false;
+            function scrollTo(target){
+            	if($(target).length>=1){
+            		height = $(target).offset().top;
+            	}
+            	$('html,body').animate({scrollTop: height}, 1200);
+            	return false;
+            }
         }
     </script>
 </body>
