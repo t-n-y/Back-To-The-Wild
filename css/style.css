@@ -76,11 +76,9 @@ html[xmlns] .clearfix {
   font-weight: normal;
   font-style: normal;
 }
- 
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   display: inline-block;
-  
 }
 .icon-twitter:before { content: '\e802'; } /* '' */
 .icon-pinterest:before { content: '\e803'; } /* '' */
@@ -89,9 +87,9 @@ html[xmlns] .clearfix {
 
 
 /*--------------------- smint navigation -----------------*/
-.subMenu {position: absolute;height: 50px;z-index: 1000;width: 100%;background: #aabd46;}
-.subNavBtn {display: block;height: 35px;width: 12%;float: left;margin: 0px 0px 0 0;text-decoration: none;padding: 15px 2% 0 2%; text-align: center;color: #fff;}
-
+.subMenu {position: absolute;height: 50px;z-index: 1000;width: 100%;background: #2a1f1a;}
+.subNavBtn {display: block;height: 35px;width: 12%;float: left;margin: 0px 0px 0 0;text-decoration: none;padding: 15px 2% 0 2%; text-align: center;color: #a99680;}
+.subMenu p, .subMenu a{color: #a99680;display:inline-block;}
 /*------------------------------------------------------------------
                          Personnal style 
 ------------------------------------------------------------------*/
@@ -99,13 +97,44 @@ html[xmlns] .clearfix {
 /*---------------------------- NAV -------------------------------*/
 header{position:relative;}
 .headerContent{position:absolute;z-index:1;top:40%;left:50%;}
-/*nav, .subMenu{position: absolute;top: 0;width: 100%;z-index: 1;}*/
-/*---------------------------- BODY ------------------------------*/
-#video{padding-left:9%}
-.places li {display:inline-block;}
 
+/*---------------------------- BODY ------------------------------*/
+body{background:#f4e8dc;text-align:center;}
+#video{padding-left:9%}
+.places li {display:inline-block;margin-right:11%;text-align:center;}
+.places li p{visibility:hidden;}
+.places li a:hover{color:#f16607;}
+.places li:hover p{visibility:visible;}
+.places a{margin:auto;}
+.places li:first-child{margin-left:2%;}
+.places li:last-child{margin-right:0;}
+.alaska{background: url('../images/sprite-countries.png') no-repeat -2px -13px; width: 169px;display: block;padding-top:187px;}
+.argentine{background: url('../images/sprite-countries.png') no-repeat -181px -5px; width: 77px;display: block;padding-top:201px;}
+.lybie{background: url('../images/sprite-countries.png') no-repeat -276px -32px; width: 154px;display: block;padding-top:172px;}
+.malaisie{background: url('../images/sprite-countries.png') no-repeat -446px -31px; width: 98px;display: block;padding-top:150px;}
+.mongolie{background: url('../images/sprite-countries.png') no-repeat -561px -35px; width: 219px;display: block;padding-top:125px;}
+
+.leftInfo, .rightInfo{float:left;}
+
+/*--------------------------- FORM -----------------------------*/
+.sign{border:5px solid #f4e8dc;margin:auto;width:454px;}
+.contactForm{margin:auto;width:595px;}
+form input{display:block;width:100%;;color:#fff}
+input.submit{display:block;width:auto;margin: auto;border:none;background: rgb(241,102,7);
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxNjYwNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiODYwMGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(241,102,7,1) 0%, rgba(184,96,11,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(241,102,7,1)), color-stop(100%,rgba(184,96,11,1)));
+	background: -webkit-linear-gradient(top,  rgba(241,102,7,1) 0%,rgba(184,96,11,1) 100%);
+	background: -o-linear-gradient(top,  rgba(241,102,7,1) 0%,rgba(184,96,11,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(241,102,7,1) 0%,rgba(184,96,11,1) 100%);
+	background: linear-gradient(to bottom,  rgba(241,102,7,1) 0%,rgba(184,96,11,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16607', endColorstr='#b8600b',GradientType=0 );
+}
+.contactForm input.submit{text-align:right;}
 /*--------------------------- FOOTER -----------------------------*/
-footer{text-align:center;}
+footer{text-align:center;background:url('../images/back-end.png');background-repeat:no-repeat;
+background-size:contain;
+}
 
 /*---------------------- Responsive style ------------------------*/
 /* Large desktop */

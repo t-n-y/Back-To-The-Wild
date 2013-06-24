@@ -17,7 +17,7 @@
 				<a href="#" id="signUp" class="subNavBtn">Inscription</a>
 				<a href="#" id="concept" class="subNavBtn">Concept</a>
 				<a href="#" id="contact" class="subNavBtn">Contact</a>
-				<p>Ret'rouvez-nous sur</p>
+				<p>Retrouvez-nous sur</p>
 				<a href="https://www.facebook.com/BackToTheWild.TV"><i class="icon-facebook"></i></a>
 				<a href="https://twitter.com/bttw_tv"><i class="icon-twitter"></i></a>
 				<a href="http://instagram.com/bttw_tv"><i class="icon-instagramm"></i></a>
@@ -38,21 +38,21 @@
 		<div class="section places">
 		    <h2>Parcours des candidats</h2>
 		    <ul>
-		    	<li><a href="">Alaska</a></li>
-		    	<li><a href="">Argentine</a></li>
-		    	<li><a href="">Lybie</a></li>
-		    	<li><a href="">Malaisie</a></li>
-		    	<li><a href="">Mongolie</a></li>
+		    	<li><a href="" class="alaska">Alaska</a><p>Voir l'album sur Pinterest</p></li>
+		    	<li><a href="" class="argentine">Argentine</a><p>Voir l'album sur Pinterest</p></li>
+		    	<li><a href="" class="lybie">Lybie</a><p>Voir l'album sur Pinterest</p></li>
+		    	<li><a href="" class="malaisie">Malaisie</a><p>Voir l'album sur Pinterest</p></li>
+		    	<li><a href="" class="mongolie">Mongolie</a><p>Voir l'album sur Pinterest</p></li>
 		    </ul>
 		</div>
 		<div class="section signUp">
 		    <h2>Prouvez-nous votre valeur et</h2>
 		    <h3>tentez de devenir le prochain heros !</h3>
-		    <form action="index.php#signUp" method="post">
+		    <form action="index.php#signUp" method="post" class="sign">
 		        <input type="text" placeholder="Nom*" />
 		        <input type="text" placeholder="Email*" />
-		        <textarea name="" cols="30" rows="10" placeholder="Pourquoi pensez-vous être le prochain héros de l'émission ?*"></textarea>
-		        <input type="submit" value="Envoyer" />
+		        <textarea name="" cols="59" rows="10" placeholder="Pourquoi pensez-vous être le prochain héros de l'émission ?*"></textarea>
+		        <input type="submit" value="Envoyer" class="submit"/>
 		    </form>
 		</div>
 		<div class="section concept">
@@ -66,25 +66,27 @@
                 <p>L’equipe Back To the wild</p>
             </div>
 		</div>
-		<div class="section contact">
-		    <h2>Plus d'informations</h2>
-		    <div class="leftInfo">
-		    	<ul>
-		    		<li><a href="">contact@backtothewild.fr</a></li>
-		    		<li><a href="">@Backtothewild</a></li>
-		    		<li><a href="">fb.com/Backtothewild</a></li>
-	    		</ul>
-	    		<form action="index.php#contact" method="post">
-	    			<input type="text" placeholder="Nom*" />
-	    			<input type="text" placeholder="Email*" />
-	    			<textarea name="" cols="30" rows="10" placeholder="Votre message"></textarea>
-	    			<input type="submit" value="Envoyer" />
-	    		</form>
-		    </div>
-		</div>
 		<footer>
-		    <p>© Back to the wild <?php echo date("Y"); ?> - Tous droits réservés</p>
-		    <a href="">Plan du site</a>
+    		<div class="section contact clearfix">
+    		    <h2>Plus d'informations</h2>
+    		    <div class="leftInfo">
+    		    	<ul>
+    		    		<li><a href="">contact@backtothewild.fr</a></li>
+    		    		<li><a href="">@Backtothewild</a></li>
+    		    		<li><a href="">fb.com/Backtothewild</a></li>
+    	    		</ul>
+        		</div>
+        		<div class="rightInfo">
+    	    		<form action="index.php#contact" method="post" class="contactForm">
+    	    			<input type="text" placeholder="Nom*" />
+    	    			<input type="text" placeholder="Email*" />
+    	    			<textarea name="" cols="78" rows="10" placeholder="Votre message"></textarea>
+    	    			<input type="submit" value="Envoyer" class="submit"/>
+    	    		</form>
+    		    </div>
+    		</div>
+    	    <p>© Back to the wild <?php echo date("Y"); ?> - Tous droits réservés</p>
+    	    <a href="">Plan du site</a>
 		</footer>
 	</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
