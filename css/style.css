@@ -65,22 +65,47 @@ html[xmlns] .clearfix {
 	height: 1%;
 }
 
+/*---------------------------- font icon -------------------------------*/
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?71362650');
+  src: url('../font/fontello.eot?71362650#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?71362650') format('woff'),
+       url('../font/fontello.ttf?71362650') format('truetype'),
+       url('../font/fontello.svg?71362650#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  display: inline-block;
+  
+}
+.icon-twitter:before { content: '\e802'; } /* '' */
+.icon-pinterest:before { content: '\e803'; } /* '' */
+.icon-facebook:before { content: '\e801'; } /* '' */
+.icon-instagramm:before { content: '\e800'; } /* '' */
+
+
+/*--------------------- smint navigation -----------------*/
+.subMenu {position: absolute;height: 50px;z-index: 1000;width: 100%;background: #aabd46;}
+.subNavBtn {display: block;height: 35px;width: 12%;float: left;margin: 0px 0px 0 0;text-decoration: none;padding: 15px 2% 0 2%; text-align: center;color: #fff;}
+
 /*------------------------------------------------------------------
                          Personnal style 
 ------------------------------------------------------------------*/
 
 /*---------------------------- NAV -------------------------------*/
 header{position:relative;}
-nav, .subMenu{position: absolute;top: 0;width: 100%;z-index: 1;}
-nav ul, nav li{display:inline-block;}
+.headerContent{position:absolute;z-index:1;top:40%;left:50%;}
+/*nav, .subMenu{position: absolute;top: 0;width: 100%;z-index: 1;}*/
 /*---------------------------- BODY ------------------------------*/
-h2{font-size:1.5em;}
 #video{padding-left:9%}
-#places section {display:inline-block;}
+.places li {display:inline-block;}
 
 /*--------------------------- FOOTER -----------------------------*/
 footer{text-align:center;}
-footer li{display:inline-block;}
 
 /*---------------------- Responsive style ------------------------*/
 /* Large desktop */
