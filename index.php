@@ -44,6 +44,7 @@
 		    	<li><a href="" class="malaisie">Malaisie</a><p>Voir l'album sur Pinterest</p></li>
 		    	<li><a href="" class="mongolie">Mongolie</a><p>Voir l'album sur Pinterest</p></li>
 		    </ul>
+		    <p class="scroll">Scroll</p>
 		</div>
 		<div class="section signUp">
 		    <h2>Prouvez-nous votre valeur et</h2>
@@ -51,9 +52,10 @@
 		    <form action="index.php#signUp" method="post" class="sign">
 		        <input type="text" placeholder="Nom*" />
 		        <input type="text" placeholder="Email*" />
-		        <textarea name="" cols="59" rows="10" placeholder="Pourquoi pensez-vous être le prochain héros de l'émission ?*"></textarea>
+		        <textarea name="" rows="10" placeholder="Pourquoi pensez-vous être le prochain héros de l'émission ?*"></textarea>
 		        <input type="submit" value="Envoyer" class="submit"/>
 		    </form>
+		     <p class="scroll">Scroll</p>
 		</div>
 		<div class="section concept clearfix">
 		    <h2>Concept de l'emission</h2>
@@ -68,6 +70,7 @@
                 <p class="signature">L’equipe Back To the wild</p>
             </div>
 		</div>
+		<p class="scroll">Scroll</p>
 		<footer>
     		<div class="section contact clearfix">
     		    <h2>Plus d'informations</h2>
@@ -82,7 +85,7 @@
     	    		<form action="index.php#contact" method="post" class="contactForm">
     	    			<input type="text" placeholder="Nom*"  class="contactName"/>
     	    			<input type="text" placeholder="Email*" class="contactMail"/>
-    	    			<textarea name="" cols="78" rows="10" placeholder="Votre message"></textarea>
+    	    			<textarea name="" rows="10" placeholder="Votre message"></textarea>
     	    			<input type="submit" value="Envoyer" class="submit"/>
     	    		</form>
     		    </div>
