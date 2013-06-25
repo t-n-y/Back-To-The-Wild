@@ -1,5 +1,18 @@
 @CHARSET "ISO-8859-1";
 
+@font-face
+{
+font-family: DHFSlanted;
+src: url('../font/DHFStoryBrushSlanted.ttf'),
+     url('../font/DHFStoryBrushSlanted.eot'); /* IE9 */
+}
+@font-face
+{
+font-family: DHFStoryBrush;
+src: url('../font/DHFStoryBrush.ttf'),
+     url('../font/DHFStoryBrush.eot'); /* IE9 */
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -87,8 +100,8 @@ html[xmlns] .clearfix {
 
 
 /*--------------------- smint navigation -----------------*/
-.subMenu {position: absolute;height: 50px;z-index: 1000;width: 100%;background: #2a1f1a;}
-.subNavBtn {display: block;height: 35px;width: 12%;float: left;margin: 0px 0px 0 0;text-decoration: none;padding: 15px 2% 0 2%; text-align: center;color: #a99680;}
+.subMenu {position: absolute;z-index: 1000;width: 100%;background: #2a1f1a;}
+.subNavBtn {display: block;height: 67px;float: left;margin: 0px 0px 0 0;text-decoration: none;padding: 15px 2% 0 2%;color: #a99680;border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);}
 .subMenu p, .subMenu a{color: #a99680;display:inline-block;}
 /*------------------------------------------------------------------
                          Personnal style 
@@ -96,16 +109,24 @@ html[xmlns] .clearfix {
 
 /*---------------------------- NAV -------------------------------*/
 header{position:relative;}
-.headerContent{position:absolute;z-index:1;top:40%;left:50%;}
+.headerContent{position:absolute;z-index:1;top:calc(40% - 123px);left: calc(50% - 231px);}
+.subMenu #home{text-indent:-9999px;background:url('../images/logo-small.png') no-repeat center center;height:67px;width:69px;padding:1%;}
 
 /*---------------------------- BODY ------------------------------*/
+h1{background:url('../images/logo.png') no-repeat; height:245px;width:246px;text-indent:-9999px;margin: auto;}
+h2, h3{font-family: "DHFStoryBrush", Helvetica, Arial, sans-serif;}
+.slanted{font-family:DHFSlanted;}
+h2.slanted{font-size:2.688em;}
+h3.slanted{font-size:4.625em;}
+.headerContent{color:#fff;}
+.headerContent a{color:#fff; border:1px solid #fff;text-decoration:none;padding:5px;}
 body{background:#f4e8dc;text-align:center;}
 #video{padding-left:9%}
 .places li {display:inline-block;margin-right:11%;text-align:center;}
 .places li p{visibility:hidden;}
 .places li a:hover{color:#f16607;}
-.places li:hover p{visibility:visible;}
-.places a{margin:auto;}
+.places li:hover p{visibility:visible;text-decoration:underline;}
+.places a{margin:auto;text-decoration:none;color:#373737;}
 .places li:first-child{margin-left:2%;}
 .places li:last-child{margin-right:0;}
 .alaska{background: url('../images/sprite-countries.png') no-repeat -2px -13px; width: 169px;display: block;padding-top:187px;}
@@ -113,8 +134,14 @@ body{background:#f4e8dc;text-align:center;}
 .lybie{background: url('../images/sprite-countries.png') no-repeat -276px -32px; width: 154px;display: block;padding-top:172px;}
 .malaisie{background: url('../images/sprite-countries.png') no-repeat -446px -31px; width: 98px;display: block;padding-top:150px;}
 .mongolie{background: url('../images/sprite-countries.png') no-repeat -561px -35px; width: 219px;display: block;padding-top:125px;}
-
+.imgLeft, .txtRight{float:left;}
+.imgLeft img{transform: rotate(-30deg);-ms-transform: rotate(-30deg);-webkit-transform: rotate(-30deg);border:20px solid #fff;z-index:-1;}
+.txtRight{padding:30px 20px 40px;background-color:#fff;}
+.txtRight p{margin-bottom:15px;}
+.txtRight p.signature{margin-top:45px;}
+.txtRight {text-align:left;}
 .leftInfo, .rightInfo{float:left;}
+
 
 /*--------------------------- FORM -----------------------------*/
 .sign{border:5px solid #f4e8dc;margin:auto;width:454px;}
@@ -130,11 +157,15 @@ input.submit{display:block;width:auto;margin: auto;border:none;background: rgb(2
 	background: linear-gradient(to bottom,  rgba(241,102,7,1) 0%,rgba(184,96,11,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16607', endColorstr='#b8600b',GradientType=0 );
 }
-.contactForm input.submit{text-align:right;}
+
 /*--------------------------- FOOTER -----------------------------*/
-footer{text-align:center;background:url('../images/back-end.png');background-repeat:no-repeat;
-background-size:contain;
-}
+footer{text-align:center;color:#fff;}
+footer li a{padding:17px 0 0 90px;display:block;color:#fff;text-decoration:none;}
+footer li .contactLink{background: url('../images/mail.png') no-repeat;height:56px;}
+footer li .twLink{background: url('../images/fb_contact.png') no-repeat;height:56px;}
+footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:56px;}
+.contactForm input.contactName, .contactForm input.contactMail{display:inline-block;width:48%;}
+.contactForm input.submit{ float: right;}
 
 /*---------------------- Responsive style ------------------------*/
 /* Large desktop */
