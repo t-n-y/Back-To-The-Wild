@@ -81,14 +81,12 @@
     		    		<li><a href="" class="fbLink">fb.com/Backtothewild</a></li>
     	    		</ul>
         		</div>
-        		<div class="rightInfo">
-    	    		<form action="index.php#contact" method="post" class="contactForm">
-    	    			<input type="text" placeholder="Nom*"  class="contactName"/>
-    	    			<input type="text" placeholder="Email*" class="contactMail"/>
-    	    			<textarea name="" rows="10" placeholder="Votre message"></textarea>
-    	    			<input type="submit" value="Envoyer" class="submit"/>
-    	    		</form>
-    		    </div>
+	    		<form action="index.php#contact" method="post" class="contactForm">
+	    			<input type="text" placeholder="Nom*"  class="contactName"/>
+	    			<input type="text" placeholder="Email*" class="contactMail"/>
+	    			<textarea name="" rows="10" placeholder="Votre message"></textarea>
+	    			<input type="submit" value="Envoyer" class="submit"/>
+	    		</form>
     		</div>
     	    <p>© Back to the wild <?php echo date("Y"); ?> - Tous droits réservés</p>
     	    <a href="">Plan du site</a>
