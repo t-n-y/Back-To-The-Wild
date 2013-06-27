@@ -33,10 +33,11 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 
 			
 			///////////////////////////////////
-
+			function menu(){
 			// get initial top offset for the menu 
-			var stickyTop = $('.smint').offset().top;
-			var headerHeight = $('header').height() - $('.subMenu').height();
+			//var stickyTop = $('.smint').offset().top;
+			//var headerHeight = $('header').height() - $('.subMenu').height();
+			var headerHeight = $(window).width()/1.77 - $('.subMenu').height();
 			// check position and make sticky if needed
 			var stickyMenu = function(){
 				
@@ -51,17 +52,21 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 						$('.smint').css({ 'position': 'absolute', 'top': headerHeight/*'100%'stickyTop*/ }).removeClass('fxd'); 
 					}   
 			};
+			stickyMenu();
+			}
 					
 			// run function
-			stickyMenu();
+			menu();
+			
 					
 			// run function every time you scroll
 			$(window).scroll(function() {
-				 stickyMenu();
+				 //stickyMenu();
+				menu();
 			});
 			
 			$(window).resize( function(){
-				
+				menu();
 			});
 			
 			///////////////////////////////////////

@@ -11,6 +11,7 @@
 <body>
 	<div class="wrap">
 		<header>
+				<a href="#" id="menu" >Menu</a>
 			<div class="subMenu" >
 				<a href="#" id="home" class="subNavBtn">Home</a> 
 		 		<a href="#" id="places" class="subNavBtn">Lieux</a> 
@@ -23,6 +24,7 @@
 				<a href="http://instagram.com/bttw_tv"><i class="icon-instagramm"></i></a>
 				<a href="http://pinterest.com/bttwtv"><i class="icon-pinterest"></i></a>
 			</div>
+			<a href="#" id="close" >Fermer</a> 
 			<div class="headerContent">
     			<h1>Back to the wild</h1>
     			<h2 class="slanted">Partez en homme</h2>
@@ -30,19 +32,21 @@
     			<a href="">Regarder la video</a>
 			</div>
 			<div class="container home">
-    		    <div class="vendor">
-    		       <iframe src="http://player.vimeo.com/video/34127945" id="video"></iframe>
-    		    </div>
+    		    <video width="100%" height="" autoplay loop>
+				  <source src="video/H264720p.mp4" type="video/mp4">
+				  <source src="video/H264720p.ogv" type="video/ogg">
+				Your browser does not support the video tag.
+				</video> 
 			</div>
 		</header>
 		<div class="section places">
 		    <h2>Parcours des candidats</h2>
 		    <ul>
-		    	<li><a href="" class="alaska">Alaska</a><p>Voir l'album sur Pinterest</p></li>
-		    	<li><a href="" class="argentine">Argentine</a><p>Voir l'album sur Pinterest</p></li>
-		    	<li><a href="" class="lybie">Lybie</a><p>Voir l'album sur Pinterest</p></li>
-		    	<li><a href="" class="malaisie">Malaisie</a><p>Voir l'album sur Pinterest</p></li>
-		    	<li><a href="" class="mongolie">Mongolie</a><p>Voir l'album sur Pinterest</p></li>
+		    	<li><a href="" class="alaska">Alaska</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="" class="argentine">Argentine</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="" class="lybie">Lybie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="" class="malaisie">Malaisie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="" class="mongolie">Mongolie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
 		    </ul>
 		    <p class="scroll">Scroll</p>
 		</div>
@@ -64,10 +68,10 @@
 		    </div>
 		    <div class="txtRight">
 		        <p>Back To The Wild vous permet de vous retrouver seul face à la nature.Les plus motivés seront sélectionnés pour participer à cette aventure unique.</p>
-                <p>Différents parcours proposés, dans différents pays, diffèrents climats, et de différentes difficultés.</p>
+                <p>Différents parcours proposés, dans différents pays, différents climats, et de différentes difficultés.</p>
                 <p>Vous serez parachuté en pleine nature avec pour seule aide un gps, une ration de survie et devrez rallié un point le plus rapidement possible.</p>
                 <p>Survie et dépassement de soit sont les maîtres mots de cette expérience hors du commun.</p>
-                <p class="signature">L’equipe Back To the wild</p>
+                <p class="signature">L'equipe Back To the wild</p>
             </div>
 		</div>
 		<p class="scroll">Scroll</p>
@@ -93,16 +97,28 @@
 		</footer>
 	</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" 	src="js/modernizr.custom.js"></script>
 	<script type="text/javascript" 	src="js/jquery.smint.js"></script>
-	 <script src="js/jquery.fitvids.js"></script>
     <script>
-        // Basic FitVids Test
-        $(".container").fitVids();
-
-		$(document).ready( function() {
+       	$(document).ready( function() {
 		    $('.subMenu').smint({
 		    	'scrollSpeed' : 1000
 		    });
+
+			$('#menu').on("click", function(){
+				console.log('click');
+				$('.subMenu').show();
+				$('#close').show();
+			});
+			$('#close').on("click", function(){
+				console.log('click');
+				$('.subMenu').hide();
+				$('#close').hide();
+			});
+			$('.subNavBtn').on("click", function(){
+				$('.subNavBtn').removeClass('active');
+				$(this).addClass('active');
+			});
 		});
 	</script>
 </body>
