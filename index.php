@@ -124,11 +124,11 @@ if (isset($_POST['sign']))
 		<div class="section places">
 		    <h2>Parcours des candidats</h2>
 		    <ul>
-		    	<li><a href="" class="alaska">Alaska</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="" class="argentine">Argentine</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="" class="lybie">Lybie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="" class="malaisie">Malaisie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="" class="mongolie">Mongolie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/alaska/" class="alaska">Alaska</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/argentine/" class="argentine">Argentine</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/sahara/" class="lybie">Lybie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/malaisie/" class="malaisie">Malaisie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/mongolie/" class="mongolie">Mongolie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
 		    </ul>
 		    <p class="scroll">Scroll</p>
 		</div>
@@ -165,9 +165,9 @@ if (isset($_POST['sign']))
     		    <h2>Plus d'informations</h2>
     		    <div class="leftInfo">
     		    	<ul>
-    		    		<li><a href="" class="contactLink">contact@backtothewild.fr</a></li>
-    		    		<li><a href="" class="twLink">@Backtothewild</a></li>
-    		    		<li><a href="" class="fbLink">fb.com/Backtothewild</a></li>
+    		    		<li><a href="mailto:contact@backtothewild.com" class="contactLink">contact@backtothewild.fr</a></li>
+    		    		<li><a href="https://twitter.com/bttw_tv" class="twLink">@Backtothewild</a></li>
+    		    		<li><a href="https://www.facebook.com/BackToTheWild.TV" class="fbLink">fb.com/Backtothewild</a></li>
     	    		</ul>
         		</div>
         		 <?php echo $confirmMail;?>
