@@ -5,9 +5,13 @@
 <title>Back to the wild</title>
 <link rel="icon" href="css/favicon.ico" />
 <link rel="icon" type="image/png" href="css/bttw_favicon.png" />
-<meta name = "keywords" content = "" />
-<meta name = "description" content = "" />
+<meta name = "keywords" content = "back to the wild nature héros aventure" />
+<meta name = "description" content = "Back to the wild - partez en homme, revenez en héros !" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Back to the wild" /> 
+<meta property="og:description" content="Back to the wild - partez en homme, revenez en héros !" />  
+<meta property="og:image" content="images/logo.jpg" /> 
+
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -100,28 +104,7 @@
 	</div>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script type="text/javascript" 	src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" 	src="js/base.js"></script>
 	<script type="text/javascript" 	src="js/jquery.smint.js"></script>
-    <script>
-       	$(document).ready( function() {
-		    $('.subMenu').smint({
-		    	'scrollSpeed' : 1000
-		    });
-
-			$('#menu').on("click", function(){
-				console.log('click');
-				$('.subMenu').show();
-				$('#close').show();
-			});
-			$('#close').on("click", function(){
-				console.log('click');
-				$('.subMenu').hide();
-				$('#close').hide();
-			});
-			$('.subNavBtn').on("click", function(){
-				$('.subNavBtn').removeClass('active');
-				$(this).addClass('active');
-			});
-		});
-	</script>
 </body>
 </html>

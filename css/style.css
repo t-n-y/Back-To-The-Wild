@@ -266,9 +266,9 @@ footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:5
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	h1{background:url('../images/logo-mobile.png') no-repeat; height:117px;width:120px;margin-top:31px;}
-	h2, h2.slanted{font-size:2em;}
+	h2, h2.slanted{font-size:1.5em;}
 	h3{font-size:2.5em;}
-	h3.slanted{font-size:3em;padding-bottom: 9px;}
+	h3.slanted{font-size:2em;padding-bottom: 9px;}
 	#menu, #close{background-image:url('../images/wood.jpg');display:none;border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);padding:20px 0;color: #a99680;font-family: "proxima nova bold";font-size:1em;text-decoration:none;}
 	.no-touch #menu:hover, .no-touch #close:hover{color:#f16607;}
 	#menu:after, #menu:before{content:"";border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);padding-right:5px;}
