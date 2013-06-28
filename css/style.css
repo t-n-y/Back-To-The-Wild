@@ -109,7 +109,7 @@ html[xmlns] .clearfix {
 
 /*---------------------------- NAV -------------------------------*/
 header{position:relative;}
-.headerContent{position:absolute;z-index:1;top: 15%;width: 100%;}
+.headerContent{position:absolute;z-index:1;top: 9%;width: 100%;}
 .subMenu #home{text-indent:-9999px;background:url('../images/logo-small.png') no-repeat center center;width:69px;}
 .headerContent a{font-family: "proxima nova extrabold";font-size:0.75em;}
 #menu, #close{display:none;}
@@ -133,24 +133,28 @@ h3.slanted{font-size:4.625em;padding-bottom:40px;}
 body{background:#f4e8dc;text-align:center;font-family: Helvetica, Arial, sans-serif;}
 header p, header a{text-transform:uppercase;}
 #video{padding-left:9%}
-.places li {display:inline-block;margin-right:9%;text-align:center;}
+.places li {display:inline-block;margin-right:3%;text-align:center;}
 .places li a.more{visibility:hidden;font-size:0.750em;text-decoration:none;text-transform:none;}
 .no-touch .places li a:hover, .subMenu a.active, .no-touch .subMenu a.subNavBtn:hover, .no-touch i:hover{color:#f16607;}
 .no-touch .places li:hover .more{visibility:visible;text-decoration:underline;}
 .places a{margin:auto;text-decoration:none;color:#373737;text-transform:uppercase;font-family: "proxima nova bold";font-size:0.875em;}
-.places li:first-child{margin-left:1%;}
 .places li:last-child{margin-right:0;}
 .places .more{font-family: "proxima nova";font-size:0.75em;color:#3e3d39;}
 .alaska{background: url('../images/sprite-countries.png') no-repeat -2px -13px; width: 169px;display: block;padding-top:187px;}
+.no-touch .alaska:hover{background: url('../images/sprite-countries.png') no-repeat -792px -13px;}
 .argentine{background: url('../images/sprite-countries.png') no-repeat -181px -5px; width: 77px;display: block;padding-top:201px;}
-.lybie{background: url('../images/sprite-countries.png') no-repeat -276px -32px; width: 154px;display: block;padding-top:172px;}
-.malaisie{background: url('../images/sprite-countries.png') no-repeat -446px -31px; width: 98px;display: block;padding-top:150px;}
-.mongolie{background: url('../images/sprite-countries.png') no-repeat -561px -35px; width: 219px;display: block;padding-top:125px;}
+.no-touch .argentine:hover{background: url('../images/sprite-countries.png') no-repeat -971px -5px;}
+.lybie{background: url('../images/sprite-countries.png') no-repeat -276px -39px; width: 154px;display: block;padding-top:172px;}
+.no-touch .lybie:hover{background: url('../images/sprite-countries.png') no-repeat -1066px -39px;}
+.malaisie{background: url('../images/sprite-countries.png') no-repeat -446px -31px; width: 98px;display: block;padding-top:166px;}
+.no-touch .malaisie:hover{background: url('../images/sprite-countries.png') no-repeat -1236px -31px;}
+.mongolie{background: url('../images/sprite-countries.png') no-repeat -561px -35px; width: 219px;display: block;padding-top:155px;}
+.no-touch .mongolie:hover{background: url('../images/sprite-countries.png') no-repeat -1351px -35px;}
 .scroll{font-family: "DHFStoryBrush", Helvetica, Arial, sans-serif;font-size:0.938em;background:url('../images/scroll.png') no-repeat center bottom;padding-top:0,938em;/*height: calc(50px + 0.938em)*/height:70px;margin: 7% auto;width: 43px;}
 .concept p{font-family: "proxima nova";font-size:1.125em;}
 .imgLeft, .txtRight{float:left;}
 .imgLeft img{transform: rotate(-15deg);-ms-transform: rotate(-15deg);-webkit-transform: rotate(-15deg);-moz-transform: rotate(-15deg);border:20px solid #fff;z-index:-1;}
-.txtRight{padding:30px 20px 40px;background:url('../images/fond-text.jpg');text-align:left;width:500px;box-shadow: 1px 1px 5px #888888;position:relative;}
+.txtRight{padding:30px 12px 40px;background:url('../images/fond-text.jpg');text-align:left;width:500px;box-shadow: 1px 1px 5px #888888;position:relative;}
 .txtRight p{margin-bottom:15px;}
 .txtRight p.signature{margin-top:45px;font-family: DHFStoryBrush;font-size:1.313em;}
 .leftInfo, .contactForm{float:left;}
@@ -160,9 +164,9 @@ header p, header a{text-transform:uppercase;}
 
 
 /*--------------------------- FORM -----------------------------*/
-.sign{border:10px solid #f4e8dc;margin:auto;width:454px;background-color:#f4e8dc;}
+.sign{border:10px solid #f4e8dc;border-right: 22px solid #f4e8dc;margin:auto;width:454px;background-color:#f4e8dc;}
 .contactForm{width:35%;}
-form input, form textarea{display:block;width:100%;;color:#888888;border:0;border-radius:3px;font-family: "proxima nova semibold";font-size:0.875em;}
+form input, form textarea{padding-left:10px;display:block;width:97%;;color:#888888;border:0;border-radius:3px;font-family: "proxima nova semibold";font-size:0.875em;}
 form input{height:40px;margin-bottom:10px;}
 input.submit{cursor:pointer;font-family: "proxima nova bold";font-size:0.875em;display:block;width:auto;margin: 20px auto auto;color:#fff;border:none;padding:5px 30px;background: rgb(241,102,7);
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxNjYwNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiODYwMGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -195,8 +199,8 @@ footer li .contactLink{background: url('../images/mail.png') no-repeat;height:56
 footer li .twLink{background: url('../images/fb_contact.png') no-repeat;height:56px;}
 footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:56px;}
 .contactForm input.contactName, .contactForm input.contactMail{display:inline-block;}
-.contactName{width:49%;margin-right:1%;}
-.contactMail{width:48%;}
+.contactName{width:46%;margin-right:1%;}
+.contactMail{width:45%;}
 .contactForm input.submit{float: right;}
 
 
@@ -208,32 +212,94 @@ footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:5
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
+	h1{background:url('../images/logo-portrait.png') no-repeat; height:185px;width:186px;}
+	h2.slanted {font-size: 2em;}
+	h3.slanted {font-size: 3.5em;padding-bottom: 2%;}
 	.subMenu {padding-left: 1%;width:100%;}
-	.scroll{width:90%;text-align: right;padding-right: 9px;}
+	.subMenu a{font-size:0.8em;}
+	.subMenu p{font-size:0.7em;}
+	.places li{margin-right:1%;}
+	.alaska{background: url('../images/sprite-countries-paysage.png') no-repeat -14px -29px;width: 136px;height: 135px;}
+	.argentine{background: url('../images/sprite-countries-paysage.png') no-repeat -157px -23px;width: 62px;height: 135px;}
+	.lybie{background: url('../images/sprite-countries-paysage.png') no-repeat -243px -50px;width: 103px;height: 135px;}
+	.malaisie{background: url('../images/sprite-countries-paysage.png') no-repeat -369px -44px;width: 79px;	height: 135px;}
+	.mongolie{background: url('../images/sprite-countries-paysage.png') no-repeat -460px -47px;	width: 176px;height: 135px;}
+	.no-touch .alaska:hover{background: url('../images/sprite-countries-paysage.png') no-repeat -646px -29px;width: 136px;height: 135px;}
+	.no-touch  .argentine:hover{background: url('../images/sprite-countries-paysage.png') no-repeat -789px -23px;width: 62px;height: 135px;}
+	.no-touch .lybie:hover{background: url('../images/sprite-countries-paysage.png') no-repeat -875px -50px;width: 103px;height: 135px;}
+	.no-touch .malaisie:hover{background: url('../images/sprite-countries-paysage.png') no-repeat -1001px -44px;width: 79px;height: 135px;}
+	.no-touch .mongolie:hover{background: url('../images/sprite-countries-paysage.png') no-repeat -1092px -47px;width: 176px;height: 135px;}
+	.scroll{width:90%;text-align: right;padding-right: 9px;background-position:right;}
 	.signUp{background: url(../images/back-signup-paysage.png) no-repeat center top;-webkit-background-size: contain;-moz-background-size: contain;-o-background-size: contain;background-size: contain;}
+	.imgLeft{width: 27%;}
 	footer{background: url(../images/back-end-paysage.png) no-repeat center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+	.contactMail {width: 41%;}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
+	h1{background:url('../images/logo-portrait.png') no-repeat; height:185px;width:186px;}
+	h2.slanted {font-size: 1.5em;}
+	h3.slanted {font-size: 3em;padding-bottom: 1%;}
 	.subMenu {padding-left: 1%;width:100%;}
+	.subMenu a{font-size:0.8em;}
+	.subMenu p{font-size:0.7em;}
+	.places li{margin-right:0;width: 19%;}
+	.alaska{background: url('../images/sprite-countries-portrait.png') no-repeat -10px -8px;width: 93px;height: 92px;}
+	.argentine{background: url('../images/sprite-countries-portrait.png') no-repeat -108px -4px;width: 43px;height: 92px;}
+	.lybie{background: url('../images/sprite-countries-portrait.png') no-repeat -167px -22px;width: 72px;height: 92px;}
+	.malaisie{background: url('../images/sprite-countries-portrait.png') no-repeat -254px -18px;width: 54px;height: 92px;}
+	.mongolie{background: url('../images/sprite-countries-portrait.png') no-repeat -317px -20px;width: 121px;height: 92px;}
+	.no-touch .alaska:hover{background: url('../images/sprite-countries-portrait.png') no-repeat -444px -8px;width: 93px;height: 92px;}
+	.no-touch  .argentine:hover{background: url('../images/sprite-countries-portrait.png') no-repeat -542px -4px;width: 43px;height: 92px;}
+	.no-touch .lybie:hover{background: url('../images/sprite-countries-portrait.png') no-repeat -602px -22px;width: 72px;height: 92px;}
+	.no-touch .malaisie:hover{background: url('../images/sprite-countries-portrait.png') no-repeat -688px -18px;width: 54px;height: 92px;}
+	.no-touch .mongolie:hover{background: url('../images/sprite-countries-portrait.png') no-repeat -751px -20px;width: 121px;height: 92px;}
+	.scroll{width:90%;text-align: right;padding-right: 9px;background-position:right;}
 	.signUp{background: url(../images/back-signup-portrait.png) no-repeat center top;-webkit-background-size: contain;-moz-background-size: contain;-o-background-size: contain;background-size: contain;}
+	.imgLeft{width: 27%;}
+	.txtRight{width: 64%;}
 	footer{background: url(../images/back-end-portrait.png) no-repeat center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+	.contactMail {width: 41%;}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+	h1{background:url('../images/logo-mobile.png') no-repeat; height:117px;width:120px;margin-top:31px;}
+	h2, h2.slanted{font-size:2em;}
+	h3{font-size:2.5em;}
+	h3.slanted{font-size:3em;padding-bottom: 9px;}
 	#menu, #close{background-image:url('../images/wood.jpg');display:none;border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);padding:20px 0;color: #a99680;font-family: "proxima nova bold";font-size:1em;text-decoration:none;}
 	.no-touch #menu:hover, .no-touch #close:hover{color:#f16607;}
 	#menu:after, #menu:before{content:"";border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);padding-right:5px;}
 	#menu:before { position:relative; left: -10px;z-index:100; }
 	#menu{display:block;z-index:100;position:relative;}
-	#close{position: absolute;top: 275px;z-index:100;width: 100%;left: 0;}
+	#close{position: fixed;top: 275px;z-index:100;width: 100%;left: 0;}
 	.subMenu{display:none;background-image:none;background-color:#1a1511;}
 	.subMenu p, header i{display:none;}
 	.subMenu #home{text-indent:0;background-image:none;width:98%;padding: 10px 2% 0;}
 	.subMenu a{display:none;}
 	.subMenu a.subNavBtn {border-right: none;box-shadow:none;float: none;height: 45px; padding: 10px 2% 0;text-decoration: none;}
+	.places li{display:inline;}
+	.alaska{background: url('../images/sprite-countries.png') no-repeat -2px -13px; width: 169px;display: block;padding-top:187px;}
+	.no-touch .alaska:hover{background: url('../images/sprite-countries.png') no-repeat -792px -13px;width: 169px;display: block;padding-top:187px;}
+	.argentine{background: url('../images/sprite-countries.png') no-repeat -181px -5px; width: 77px;display: block;padding-top:201px;}
+	.no-touch .argentine:hover{background: url('../images/sprite-countries.png') no-repeat -971px -5px;width: 77px;display: block;padding-top:201px;}
+	.lybie{background: url('../images/sprite-countries.png') no-repeat -276px -39px; width: 154px;display: block;padding-top:172px;}
+	.no-touch .lybie:hover{background: url('../images/sprite-countries.png') no-repeat -1066px -39px; width: 154px;display: block;padding-top:172px;}
+	.malaisie{background: url('../images/sprite-countries.png') no-repeat -446px -31px; width: 98px;display: block;padding-top:166px;}
+	.no-touch .malaisie:hover{background: url('../images/sprite-countries.png') no-repeat -1236px -31px;width: 98px;display: block;padding-top:166px;}
+	.mongolie{background: url('../images/sprite-countries.png') no-repeat -561px -35px; width: 219px;display: block;padding-top:155px;}
+	.no-touch .mongolie:hover{background: url('../images/sprite-countries.png') no-repeat -1351px -35px;width: 219px;display: block;padding-top:155px;}
+	.scroll {height: 70px;margin: 7% auto;width: 43px;}
+	.sign{width: 94%;}
 	.imgLeft{display:none;}
-	.txtRight{width:97%;padding:3%;}
+	.txtRight{width:94%;padding:3%;}
+	.leftInfo{float:none;width:65%;margin:auto;font-size:1em;}
+	.contactForm{float:none;width:88%;margin:auto;}
+	.contactForm input.submit{float:none;}
+	form input, form textarea{width:99%;}
+	.contactName, .contactMail{width:99%;}
+	footer p{margin-top:6%;}
+	footer li a{font-size:1em;}
 }
