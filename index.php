@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <title>Back to the wild</title>
+<link rel="icon" href="css/favicon.ico" />
+<link rel="icon" type="image/png" href="css/bttw_favicon.png" />
 <meta name = "keywords" content = "" />
 <meta name = "description" content = "" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
