@@ -1,3 +1,79 @@
+<?php
+$data = array (
+		'name' => '',
+		'mail' => '',
+		'message' => '');
+$errorMsg = array (
+		'name' => '', 
+		'mail' => '', 
+		'message' => '');
+$dataSign = array (
+		'name' => '',
+		'mail' => '',
+		'message' => '');
+$errorMsgSign = array (
+		'name' => '',
+		'mail' => '',
+		'message' => '');
+$confirmMail='';
+$to = "contact@detente-noir.com";
+$subject = "Nouveau message";
+$mailheaders = "Reply-To: ".$data['mail'];
+if (isset($_POST['contact']))
+{
+	$data=$_POST['contact'];
+	$cleanData=array_map('strip_tags', $data);
+	$error=false;
+	if (empty($data['name']))
+	{
+		$error=true;
+		$errorMsg['name']='Remplir le nom';
+	}
+	if (empty($data['mail']))
+	{
+		$error=true;
+		$errorMsg['mail']='Remplir l\'email';
+	}
+	if (empty($data['message']))
+	{
+		$error=true;
+		$errorMsg['message']='Ecrire un message';
+	}
+	if (!$error)
+	{
+		$msg="Message de ".$cleanData['firstname']." ".$cleanData['name']."\n Adresse e-mail : ".$cleanData['email']."\n Message :".$cleanData['message'];
+		mail($to, $subject, $msg);
+		$confirmMail = '<h3>Message envoyé !</h3>';
+	}
+}
+if (isset($_POST['sign']))
+{
+	$dataSign=$_POST['sign'];
+	$cleanData=array_map('strip_tags', $dataSign);
+	$error=false;
+	if (empty($data['name']))
+	{
+		$error=true;
+		$errorMsgSign['name']='Remplir le nom';
+	}
+	if (empty($data['mail']))
+	{
+		$error=true;
+		$errorMsgSign['mail']='Remplir l\'email';
+	}
+	if (empty($data['message']))
+	{
+		$error=true;
+		$errorMsgSign['message']='Ecrire un message';
+	}
+	if (!$error)
+	{
+		$msg="Message de ".$cleanData['firstname']." ".$cleanData['name']."\n Adresse e-mail : ".$cleanData['email']."\n Message :".$cleanData['message'];
+		mail($to, $subject, $msg);
+		$confirmMail = '<h3>Message envoyé !</h3>';
+	}
+}
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -59,10 +135,13 @@
 		<div class="section signUp">
 		    <h2>Prouvez-nous votre valeur et</h2>
 		    <h3>tentez de devenir le prochain heros !</h3>
+		    <?php echo $confirmMail;?>
 		    <form action="index.php#signUp" method="post" class="sign">
-		        <input type="text" placeholder="Nom*" />
-		        <input type="text" placeholder="Email*" />
-		        <textarea name="" rows="10" placeholder="Pourquoi pensez-vous être le prochain héros de l'émission ?*"></textarea>
+		   		<?php echo $errorMsgSign['name'];?>
+		        <input type="text" placeholder="Nom*" name="sign[name]" value="<?php echo $dataSign['name'];?>" required/>
+		        <?php echo $errorMsgSign['name'];?>
+		        <input type="email" placeholder="Email*" name="sign[mail]" value="<?php  echo $dataSign['mail'];?>"/>
+		        <textarea name="" rows="10" placeholder="Pourquoi pensez-vous être le prochain héros de l'émission ?*" name ="sign[message]"><?php echo $dataSign['message'];?></textarea>
 		        <input type="submit" value="Envoyer" class="submit"/>
 		    </form>
 		     <p class="scroll">Scroll</p>
@@ -91,10 +170,14 @@
     		    		<li><a href="" class="fbLink">fb.com/Backtothewild</a></li>
     	    		</ul>
         		</div>
+        		 <?php echo $confirmMail;?>
 	    		<form action="index.php#contact" method="post" class="contactForm">
-	    			<input type="text" placeholder="Nom*"  class="contactName"/>
-	    			<input type="text" placeholder="Email*" class="contactMail"/>
-	    			<textarea name="" rows="10" placeholder="Votre message"></textarea>
+		    		<?php echo $errorMsg['name'];?>
+			    	<input type="text" placeholder="Nom*" name="contact[name]" value="<?php echo $data['name'];?>" class="contactName" required>
+			    	<?php echo $errorMsg['mail'];?>
+			    	<input type="email" placeholder="Email*" name="contact[mail]" value="<?php  echo $data['mail'];?>" class="contactMail">
+			    	<?php echo $errorMsg['message'];?>
+			    	<textarea rows="10" placeholder="Votre message" name ="contact[message]"><?php echo $data['message'];?></textarea>
 	    			<input type="submit" value="Envoyer" class="submit"/>
 	    		</form>
     		</div>
