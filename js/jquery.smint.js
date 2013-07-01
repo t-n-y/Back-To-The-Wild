@@ -22,7 +22,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
             }, options);
 
 
-		return $('.smint a').each( function() {
+		return $('.smint a.subNavBtn').each( function() {
 
             
 			if ( settings.scrollSpeed ) {

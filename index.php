@@ -101,10 +101,10 @@ if (isset($_POST['sign']))
 				<a href="#" id="concept" class="subNavBtn">Concept</a>
 				<a href="#" id="contact" class="subNavBtn">Contact</a>
 				<p>Retrouvez-nous sur</p>
-				<a href="https://www.facebook.com/BackToTheWild.TV"><i class="icon-facebook"></i></a>
-				<a href="https://twitter.com/bttw_tv"><i class="icon-twitter"></i></a>
-				<a href="http://instagram.com/bttw_tv"><i class="icon-instagramm"></i></a>
-				<a href="http://pinterest.com/bttwtv"><i class="icon-pinterest"></i></a>
+				<a href="https://www.facebook.com/BackToTheWild.TV" target="_blank"><i class="icon-facebook"></i></a>
+				<a href="https://twitter.com/bttw_tv" target="_blank"><i class="icon-twitter"></i></a>
+				<a href="http://instagram.com/bttw_tv" target="_blank"><i class="icon-instagramm"></i></a>
+				<a href="http://pinterest.com/bttwtv" target="_blank"><i class="icon-pinterest"></i></a>
 			</div>
 			<a href="#" id="close" >Fermer</a> 
 			<div class="headerContent">
@@ -124,11 +124,11 @@ if (isset($_POST['sign']))
 		<div class="section places">
 		    <h2>Parcours des candidats</h2>
 		    <ul>
-		    	<li><a href="http://pinterest.com/bttwtv/alaska/" class="alaska">Alaska</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="http://pinterest.com/bttwtv/argentine/" class="argentine">Argentine</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="http://pinterest.com/bttwtv/sahara/" class="lybie">Lybie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="http://pinterest.com/bttwtv/malaisie/" class="malaisie">Malaisie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
-		    	<li><a href="http://pinterest.com/bttwtv/mongolie/" class="mongolie">Mongolie</a><a href="" class="more">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/alaska/" class="alaska" target="_blank">Alaska</a><a href="http://pinterest.com/bttwtv/alaska/" class="more" target="_blank">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/argentine/" class="argentine" target="_blank">Argentine</a><a href="http://pinterest.com/bttwtv/argentine/" class="more" target="_blank">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/sahara/" class="lybie" target="_blank">Lybie</a><a href="http://pinterest.com/bttwtv/sahara/" class="more" target="_blank">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/malaisie/" class="malaisie" target="_blank">Malaisie</a><a href="http://pinterest.com/bttwtv/malaisie/" class="more" target="_blank">Voir l'album sur Pinterest</a></li>
+		    	<li><a href="http://pinterest.com/bttwtv/mongolie/" class="mongolie" target="_blank">Mongolie</a><a href="http://pinterest.com/bttwtv/mongolie/" class="more" target="_blank">Voir l'album sur Pinterest</a></li>
 		    </ul>
 		    <p class="scroll">Scroll</p>
 		</div>
@@ -166,8 +166,8 @@ if (isset($_POST['sign']))
     		    <div class="leftInfo">
     		    	<ul>
     		    		<li><a href="mailto:contact@backtothewild.com" class="contactLink">contact@backtothewild.fr</a></li>
-    		    		<li><a href="https://twitter.com/bttw_tv" class="twLink">@Backtothewild</a></li>
-    		    		<li><a href="https://www.facebook.com/BackToTheWild.TV" class="fbLink">fb.com/Backtothewild</a></li>
+    		    		<li><a href="https://twitter.com/bttw_tv" class="twLink" target="_blank">@Backtothewild</a></li>
+    		    		<li><a href="https://www.facebook.com/BackToTheWild.TV" class="fbLink" target="_blank">fb.com/Backtothewild</a></li>
     	    		</ul>
         		</div>
         		 <?php echo $confirmMail;?>

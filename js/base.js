@@ -3,15 +3,15 @@ $(document).ready( function() {
     	'scrollSpeed' : 1000
     });
 
-	$('#menu').on("click", function(){
-		console.log('click');
+	$('#menu').on("click", function(e){
 		$('.subMenu').show();
 		$('#close').show();
+		e.preventDefault();
 	});
-	$('#close').on("click", function(){
-		console.log('click');
+	$('#close').on("click", function(e){
 		$('.subMenu').hide();
 		$('#close').hide();
+		e.preventDefault();
 	});
 	$('.subNavBtn').on("click", function(){
 		$('.subNavBtn').removeClass('active');

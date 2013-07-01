@@ -273,7 +273,7 @@ footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:5
 	.no-touch #menu:hover, .no-touch #close:hover{color:#f16607;}
 	#menu:after, #menu:before{content:"";border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);padding-right:5px;}
 	#menu:before { position:relative; left: -10px;z-index:100; }
-	#menu{display:block;z-index:100;position:relative;}
+	#menu{display:block;z-index:100;position: fixed;width: 100%;}
 	#close{position: fixed;top: 275px;z-index:100;width: 100%;left: 0;}
 	.subMenu{display:none;background-image:none;background-color:#1a1511;}
 	.subMenu p, header i{display:none;}
