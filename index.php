@@ -114,6 +114,7 @@ if (isset($_POST['sign']))
     			<a href="">Regarder la video</a>
 			</div>
 			<div class="container home">
+				<img src="images/back-top-mobile.jpg" alt="riviere" width="100%"/>
     		    <video width="100%" height="" autoplay loop>
 				  <source src="video/H264720p.mp4" type="video/mp4">
 				  <source src="video/H264720p.ogv" type="video/ogg">

@@ -125,7 +125,7 @@ h2, h3{font-family: "DHFStoryBrush", Helvetica, Arial, sans-serif;font-size:2.68
 .signUp{background: url(../images/back-signup.png) no-repeat center top;-webkit-background-size: contain;-moz-background-size: contain;-o-background-size: contain;background-size: contain;}
 .contact h2{padding:10% 0;}
 h3{font-size:3.563em;}
-.slanted{font-family:DHFSlanted;}
+.slanted{font-family:DHFSlanted; color:#f6eee4;}
 h2.slanted{font-size:2.688em;}
 h3.slanted{font-size:4.625em;padding-bottom:40px;}
 .headerContent{color:#fff;}
@@ -133,6 +133,7 @@ h3.slanted{font-size:4.625em;padding-bottom:40px;}
 body{background:#f4e8dc;text-align:center;font-family: Helvetica, Arial, sans-serif;}
 header p, header a{text-transform:uppercase;}
 #video{padding-left:9%}
+.container.home img{display:none;}
 .places li {display:inline-block;margin-right:3%;text-align:center;}
 .places li a.more{visibility:hidden;font-size:0.750em;text-decoration:none;text-transform:none;}
 .no-touch .places li a:hover, .subMenu a.active, .no-touch .subMenu a.subNavBtn:hover, .no-touch i:hover{color:#f16607;}
@@ -265,10 +266,11 @@ footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:5
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
-	h1{background:url('../images/logo-mobile.png') no-repeat; height:117px;width:120px;margin-top:31px;}
-	h2, h2.slanted{font-size:1.5em;}
+	h1{background:url('../images/logo-mobile.png') no-repeat; height:117px;width:120px;margin: 14% auto;}
+	h2{font-size:1.5em;}
+	h2.slanted{font-size:2em;}
 	h3{font-size:2.5em;}
-	h3.slanted{font-size:2em;padding-bottom: 9px;}
+	h3.slanted{font-size:2.5em;padding: 2% 0 17%;}
 	#menu, #close{background-image:url('../images/wood.jpg');display:none;border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);padding:20px 0;color: #a99680;font-family: "proxima nova bold";font-size:1em;text-decoration:none;}
 	.no-touch #menu:hover, .no-touch #close:hover{color:#f16607;}
 	#menu:after, #menu:before{content:"";border-right: 1px solid #121212;box-shadow: 1px 0 0 rgba(255, 255, 255, 0.07);padding-right:5px;}
@@ -280,6 +282,8 @@ footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:5
 	.subMenu #home{text-indent:0;background-image:none;width:98%;padding: 10px 2% 0;}
 	.subMenu a{display:none;}
 	.subMenu a.subNavBtn {border-right: none;box-shadow:none;float: none;height: 45px; padding: 10px 2% 0;text-decoration: none;}
+	.container.home img{display:inline;}
+	.container.home video{display:none;}
 	.places li{display:inline;}
 	.alaska{background: url('../images/sprite-countries.png') no-repeat -2px -13px; width: 169px;display: block;padding-top:187px;}
 	.no-touch .alaska:hover{background: url('../images/sprite-countries.png') no-repeat -792px -13px;width: 169px;display: block;padding-top:187px;}
@@ -292,7 +296,7 @@ footer li .fbLink{background: url('../images/tw_contact.png') no-repeat;height:5
 	.mongolie{background: url('../images/sprite-countries.png') no-repeat -561px -35px; width: 219px;display: block;padding-top:155px;}
 	.no-touch .mongolie:hover{background: url('../images/sprite-countries.png') no-repeat -1351px -35px;width: 219px;display: block;padding-top:155px;}
 	.scroll {height: 70px;margin: 7% auto;width: 43px;}
-	.sign{width: 94%;}
+	.sign{width: 93%;}
 	.imgLeft{display:none;}
 	.txtRight{width:94%;padding:3%;}
 	.leftInfo{float:none;width:65%;margin:auto;font-size:1em;}
