@@ -133,7 +133,7 @@ h3.slanted{font-size:4.625em;padding-bottom:40px;}
 body{background:#f4e8dc;text-align:center;font-family: Helvetica, Arial, sans-serif;}
 header p, header a{text-transform:uppercase;}
 #video{padding-left:9%}
-.container.home img{display:none;}
+.home img{display:none;}
 .places li {display:inline-block;margin-right:3%;text-align:center;}
 .places li a.more{visibility:hidden;font-size:0.750em;text-decoration:none;text-transform:none;}
 .no-touch .places li a:hover, .subMenu a.active, .no-touch .subMenu a.subNavBtn:hover, .no-touch i:hover{color:#f16607;}
